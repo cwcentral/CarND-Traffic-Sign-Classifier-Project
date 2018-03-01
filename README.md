@@ -13,15 +13,15 @@ The goals / steps of this project are the following:
 
 ## Rubric Points
 What is included in this project (git repo) are
-   + jupyter iPython notebook file (Traffic_Sign_Classifier.ipynb)
-   + HTML output of the results of executing the notebook (checked in as Traffic_Sign_Classifier.html)
-   + This markdown sumhttps://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/edit/home/README.mdmary
+   + jupyter [iPython notebook file](Traffic_Sign_Classifier.ipynb)
+   + [HTML output of the results of executing the notebook](Traffic_Sign_Classifier.html)
+   + [This markdown summary](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/edit/home/README.md)
 
 ### README
 
 ### 1. Project Overview
 
-Here is a link to the original [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+Here is a link to the original [Udacity project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
 Here is a link to my project code and results [project code](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/home/Traffic_Sign_Classifier.ipynb)
 
