@@ -15,15 +15,20 @@ The goals / steps of this project are the following:
 What is included in this project (git repo) are
    + jupyter iPython notebook file (Traffic_Sign_Classifier.ipynb)
    + HTML output of the results of executing the notebook (checked in as Traffic_Sign_Classifier.html)
-   + This markdown summary
+   + This markdown sumhttps://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/edit/home/README.mdmary
 
 ### README
 
 Here is a link to the original [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
+Here is a link to my project code and results [project code](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/home/Traffic_Sign_Classifier.ipynb)
+
 The reference links to get the test data used by this project are located [here] [https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/6df7ae49-c61c-4bb2-a23e-6527e69209ec/lessons/614d4728-0fad-4c9d-a6c3-23227aef8f66/project]. We used the dataset in files called:
+    
     + train.p
+    
     + test.p
+    
     + valid.p
 
 This project and it's configuration and results can be [found here](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
