@@ -87,34 +87,27 @@ Now we take the datasets and construct our CNN model. I used the standard LeNet 
 
 My final model consisted of the following layers:
 
-|:---------------------:|:---------------------------------------------:| 
-| Layer            		|     Description	        			         		| 
-|:---------------------:|:---------------------------------------------:| 
-| Convolution      		| 32x32x1 gray image, output 28x28x6            |
-| RELU                	|                                               |
-| Max pooling        	| Input = 28x28x6. Output = 14x14x6     .	     	|
-|:---------------------:|:---------------------------------------------:| 
-|						      |										            		|
-| Convolution        	| Convolutional Input =14x14x6 Output =10x10x16.|
-| RELU				    	|										            		|
-| Max pooling	      	| Input = 10x10x16. Output = 5x5x16.		   	|
-| flatten       	      | Input = 5x5x16. Output = 400.                 |
-|:---------------------:|:---------------------------------------------:| 
-|					      	|											            	|
-| Fully connected		   | Input = 400. Output = 120.                    |
-| RELU                  |                                               |
-| Dropout               |                                               |
-|:---------------------:|:---------------------------------------------:| 
-|						      |									            			|
-| Fully Connected       | Input = 120. Output = 84.                     |
-| RELU                  |                                               |
-| Dropout               |                                               |
-|:---------------------:|:---------------------------------------------:| 
-|						      |					            							|
-| Fully Connected       | Input = 84. Output = n_classes.               |
-| One Hot               |                                               |
-| Softmax               |                                               |
-|:---------------------:|:---------------------------------------------:| 
+|-----------------|------------------------------------|
+| Layer           | Description                        |
+|-----------------|------------------------------------|
+| Convolution     | 32x32x1 gray image, output 28x28x6 |
+| RELU            |                                    |
+| Max pooling     | Input = 28x28x6. Output = 14x14x6  |
+| Convolution     | Input =14x14x6 Output =10x10x16    |
+| RELU            |                                    |
+| Max pooling     | Input = 10x10x16. Output = 5x5x16  |
+| flatten         | Input = 5x5x16. Output = 400       |
+| Fully connected | Input = 400. Output = 120          |
+| RELU            |                                    |
+| Dropout         | 80%                                |
+| Fully Connected | Input = 120. Output = 84           |
+| RELU            |                                    |
+| Dropout         | 80%                                |
+| Fully Connected | Input = 84. Output = n_classes.    |
+| One Hot         |                                    |
+| Softmax         |                                    |
+|-----------------|------------------------------------|
+
 
 To train the model, I used the follwoing hyper parameters:
 
@@ -189,25 +182,25 @@ With an accuracy of 60% I think the next step is to add more augmented data and 
 As for looking at the softmax probabilities of each image I found the following. In some ways the softmax results indicate we need more randomization on my dataset.
 
 Priority sign:
-  Priority         No Entry         No passing 3.5t  Double curve     Road narrow on right
-  9.99999523e-01   4.24258218e-07   3.48734552e-08   5.21614363e-10   1.17968690e-10
+  Priority 		No Entry		No passing 3.5t 	Double curve 	Road narrow on right
+  9.99999523e-01 		4.24258218e-07 		3.48734552e-08 		5.21614363e-10 	1.17968690e-10
 
 Road work:
-  Beware Ice       Road Work        Right of way     Turn left        Road narrow on right
-  0.60561752       0.38658997       0.00324332       0.00209263       0.00092445
+  Beware Ice 	Road Work 	Right of way 	Turn left 	Road narrow on right
+  0.60561752 	0.38658997 	0.00324332 	0.00209263 	0.00092445
 
 Vehicles over 3.5mt:
-  Road Work         Dangerous curve   Roundabout       Yield           Stop      
-  0.94134355        0.03380609        0.01610352       0.00469067      0.00296442
+  Road Work 	Dangerous curve 	Roundabout 	Yield Stop      
+  0.94134355 	0.03380609 		0.01610352 	0.00469067 0.00296442
  
 
 30km/hr:
-  30km/h           100km/h          80km/h           50km/h           70km/h
-  9.99997139e-01   1.43012130e-06   1.30631202e-06   1.04868008e-07   7.95507604e-10
+  30km/h 		100km/h 	80km/h 		50km/h 		70km/h
+  9.99997139e-01 	1.43012130e-06 	1.30631202e-06 	1.04868008e-07 	7.95507604e-10
 
 Pedestrians:
-Wild animals      General Caution     Double Curve      Slippery Road     Right of way
- 0.93890363       0.03522851          0.01881449        0.00472944        0.00108749
+  Wild animals 	General Caution 	Double Curve 	Slippery 	Road Right of way
+  0.93890363 	0.03522851 		0.01881449 	0.00472944 	0.00108749
 
 ![](markdown_data/softmax.jpg)
 
