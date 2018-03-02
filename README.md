@@ -23,17 +23,13 @@ What is included in this project (git repo) are
 
 Here is a link to the original [Udacity project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
-Here is a link to my project code and results [project code](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/home/Traffic_Sign_Classifier.ipynb)
+Here is a link to my project code (jupyter notebook) and results [project code](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/home/Traffic_Sign_Classifier.ipynb)
 
 The reference links to get the test data used by this project are located [here](https://classroom.udacity.com/nanodegrees/nd013/parts/fbf77062-5703-404e-b60c-95b78b2f3f9e/modules/6df7ae49-c61c-4bb2-a23e-6527e69209ec/lessons/614d4728-0fad-4c9d-a6c3-23227aef8f66/project). I used the dataset in files called:
     
     + train.p
     + test.p
     + valid.p
-
-******
-My project, configuration and runtime results (jupyter notebook) can be [found here](https://github.com/cwcentral/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
-******
 
 Note: this project was originally developed on a NON-Nvidia computer, hence run under CPU mode.
 
