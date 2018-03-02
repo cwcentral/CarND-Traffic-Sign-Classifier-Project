@@ -53,7 +53,7 @@ The pandas library is used to calculate summary statistics of the traffic signs 
 * The shape of a traffic sign image is **(32, 32, 3)**
 * The number of unique classes/labels in the data set is **43**
 
-#### 3. Exploratory visualization of the dataset.
+### 3. Exploratory visualization of the dataset.
 
 German road sign dataset from source:
 ![](markdown_data/dataset.png?raw=true)
@@ -77,11 +77,10 @@ First, we need to preprocess the data to give the model a nice distributed sampl
 
 I performed these operations:
 
-a. convert existing data (preprocess)
-   * convert to grayscale, add contrast, and normalize the pixels
-b. Since the training dataset is not evenly random, we augmented by adding samples upto 400 to those 
+* a. convert existing data to grayscale, add contrast, and normalize the pixels
+* b. Since the training dataset is not evenly random, we augmented by adding samples upto 400 to those 
     classes with little samples. Sampling included rotating, adding noise and blurring images.
-c. sample shuffling: we need to make each set random as possible,
+* c. sample shuffling: we need to make each set random as possible,
 
 Here's what the augmented dataset looks like:
 ![](markdown_data/preprocess.png?raw=true)
@@ -141,11 +140,19 @@ Augmentation was the most helpful in keeping the accuracies from diverging as we
 Here are five German traffic signs that I found on the web:
 ![](markdown_data/test_data.jpg)
 
+A
 ![A](web_data/A.jpg)
+
+B
 ![B](web_data/B.jpg) 
+
+C
 ![C](web_data/C.jpg)
+
+D
 ![D](web_data/D.jpg) 
-![E](web_data/E.jpg)
+
+E![E](web_data/E.jpg)
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
