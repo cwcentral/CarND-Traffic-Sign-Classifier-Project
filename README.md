@@ -61,7 +61,8 @@ German road sign dataset from source:
 The dataset consists of low resolution images of german street signs. These images of each classification are fairly equal (look similar) and thus, we expect some accuracy issues. This was confirmed, so I needed to perform some image enhancement to get a more accurate representation of the data.
 
 ![](markdown_data/exploratory_visualization.png?raw=true)
-exploratory_visualization.png displays a sample of the images. I ran a histogram graph to show the number of samples spread among the classes in the dataset to get an idea of distribution. 
+
+*exploratory_visualization.png* displays a sample of the images. I ran a histogram graph to show the number of samples spread among the classes in the dataset to get an idea of distribution. 
 
 Since the dataset gven was in RGB-color, I converted to grayscale to speed up the CNN processing speed. In order to emphasize shape, edges, and patterns that deterimine CNN effectivness, I increase the contrast and normalize the images.
 ![](markdown_data/norm_images.png?raw=true)
@@ -140,11 +141,11 @@ Augmentation was the most helpful in keeping the accuracies from diverging as we
 Here are five German traffic signs that I found on the web:
 ![](markdown_data/test_data.jpg)
 
-![](web_data/A.jpg)
-![](web_data/B.jpg) 
-![](web_data/C.jpg)
-![](web_data/D.jpg) 
-![](web_data/E.jpg)
+![A](web_data/A.jpg)
+![B](web_data/B.jpg) 
+![C](web_data/C.jpg)
+![D](web_data/D.jpg) 
+![E](web_data/E.jpg)
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -164,7 +165,7 @@ As for looking at the softmax probabilities of each image I found the following.
 ![](markdown_data/softmax_table.png)
 
 Here's a graphical representation:
-![](markdown_data/softmax.jpg)
+![](markdown_data/softmax.png)
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
