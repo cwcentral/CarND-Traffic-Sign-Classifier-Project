@@ -140,11 +140,11 @@ Augmentation was the most helpful in keeping the accuracies from diverging as we
 Here are five German traffic signs that I found on the web:
 ![](markdown_data/test_data.jpg)
 
-![](web_data/A.jpg =320x240)
-![](web_data/B.jpg =320x240) 
-![](web_data/C.jpg =320x240)
-![](web_data/D.jpg =320x240) 
-![](web_data/E.jpg =320x240)
+![](web_data/A.jpg)
+![](web_data/B.jpg) 
+![](web_data/C.jpg)
+![](web_data/D.jpg) 
+![](web_data/E.jpg)
 
 #### Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
@@ -153,15 +153,15 @@ Here are the results of the prediction:
 * For Image E.jpg, expected: 12   |  Got [12] (Priority vs. Priority)
 * For Image D.jpg, expected: 25   |  Got [30] (Road work vs. Beware of ice/snow)
 * For Image C.jpg, expected: 16   |  Got [20] (Vehicles over 3.5 metric tons prohibited vs Dangerous curve to the right)
-* For Image B.jpg, expected: 1    |  Got [1]  (30km/h vs 30km/h)
+* For Image B.jpg, expected: 1     |  Got [1]  (30km/h vs 30km/h)
 * For Image A.jpg, expected: 27   |  Got [31] (Pedestrians vs Wild animals crossing)
  
-The Test Accuracy = 0.600 (60%)
+The Test Accuracy = **0.600 (60%)**
 
 With an accuracy of 60% I think the next step is to add more augmented data and improve image quality (e.g. cropping, position, sharpening)
 
 As for looking at the softmax probabilities of each image I found the following. In some ways the softmax results indicate we need more randomization on my dataset.
-![](markdown_data/softmax_table.pnng)
+![](markdown_data/softmax_table.png)
 
 Here's a graphical representation:
 ![](markdown_data/softmax.jpg)
