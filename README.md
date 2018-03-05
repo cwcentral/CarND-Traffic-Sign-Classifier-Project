@@ -170,15 +170,13 @@ As for looking at the softmax probabilities of each image I found the following.
 
 ![](markdown_data/softmax_table.png)
 
-=Discussion
++Discussion
 
 * The first image (E.jpg) showed I was able to correctly identify the image with the proper classification [12/Priority] and probability or 1.0. This is correct.
 
-* The second image (D.jpg) showed a 60% probability of a Beware of ice/snow sign. It also showed a 28% chance I got the *correct* Road Work sign.It is possible that the shapes are similar, but the labels in the middle of the shape (triangle) are not being identified properly. Augmentating the dataset with scaled-up images or even start the architecture at higher resolution (48x48x1 instead of 32x32x1) may solve this. This is incorrect and a misleading result.
+* The second image (D.jpg) showed a 60% probability of a Beware of ice/snow sign. It also showed a 28% chance I got the *correct* Road Work sign.It is possible that the shapes are similar, but the labels in the middle of the shape (triangle) are not being identified properly. Augmentating the dataset with scaled-up images or even start the architecture at higher resolution (48x48x1 instead of 32x32x1) may solve this. This is incorrect and a misleading result due to the model/architecture.
 
-* The third image (C.jpg) showed 95% probability I got a Road work sign and a 3% chance I a Dangerous curve to the right sign. The target sign was 16, a Vehicles over 3.5 metric tons prohibited sign. Since the 3.5t sign is circular and very similar to all the speed signs, harzard and other signs. We can improve/correct this with more data to train this model. Also, one can even look for text only and use a different architecture that is trained for text-based signs. 
-
-I did notice the web image was distorted, it's not ideal test input. Basically there was not enough data to train my model to identify this sign, even with augmentation. This test result was undetermined.
+* The third image (C.jpg) showed 95% probability I got a Road work sign and a 3% chance I a Dangerous curve to the right sign. The target sign was 16, a Vehicles over 3.5 metric tons prohibited sign. Since the 3.5t sign is circular and very similar to all the speed signs, harzard and other signs. We can improve/correct this with more data to train this model. Also, one can even look for text only and use a different architecture that is trained for text-based signs. I did notice the web image was distorted, it's not ideal test input. Basically there was not enough data to train my model to identify this sign, even with augmentation. This test result was undetermined.
 
 * The fourth image (B.jpg) showed I was able to correctly identify the image with the proper classification [30km/hr] and probability or 1.0. This is correct. 
 
