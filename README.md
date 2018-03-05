@@ -162,13 +162,29 @@ Here are the results of the prediction:
  
 The Test Accuracy = **0.600 (60%)**
 
-With an accuracy of 60% I think the next step is to add more augmented data and improve image quality (e.g. cropping, position, sharpening)
+In the CNN lesson, softmax probabilities to show the certainty of the model's predictions. Softmax activation allows us to calculate a probability of a classification that is in a range common (0->1.0) among all classes in the network. This allows us to compare different inputs and properly classify them.
 
-As for looking at the softmax probabilities of each image I found the following. In some ways the softmax results indicate we need more randomization on my dataset.
+Using my model against the wb images, I received an overall 60% accuracy rating. The next step is to add more augmented data and improve image quality (e.g. cropping, position, sharpening and *scaling*)
+
+As for looking at the softmax probabilities of each image I found the following. In some ways the softmax results indicate there is not enough variation in my dataset, even with augmentation:
+
 ![](markdown_data/softmax_table.png)
 
 Here's a graphical representation:
+
+* The first image (E.jpg) showed I was able to correctly identify the image with the proper classification [12/Priority] and probability or 1.0. This is correct.
+
+* The second image (D.jpg) showed a 60% probability of a Beware of ice/snow sign. It also showed a 28% chance I got the *correct* Road Work sign.It is possible that the shapes are similar, but the labels in the middle of the shape (triangle) are not being identified properly. Augmentating the dataset with scaled-up images or even start the architecture at higher resolution (48x48x1 instead of 32x32x1) may solve this. This is incorrect and a misleading result.
+
+* The third image (C.jpg) showed 95% probability I got a Road work sign and a 3% chance I a Dangerous curve to the right sign. The target sign was 16, a Vehicles over 3.5 metric tons prohibited sign. Since the 3.5t sign is circular and very similar to all the speed signs, harzard and other signs, we can improve/correct this with more data to train this model amd even looking for text and use a different architecture that is trained for text-based signs. Basically there was not enough data to train my model to identify this sign, even with augmentation. Adding more 3.5t signs to the training set will solve this.
+
+* The fourth image (B.jpg) showed I was able to correctly identify the image with the proper classification [30km/hr] and probability or 1.0. This is correct. 
+
+* The fifth image (A.jpg) showed 93% probability I got wild animal sign, which is close to the pedestrian sign. This is not correct. This can be due to over sharpening or the need to change the architecture to start with higher resolution (e.g. 48x48). Again, both signs are the same triangle shape, but the graphics in the center are different. Basically there was not enough data to train my model to identify this sign, even with augmentation. Adding more pedestrian signs to the training set will solve this.
+
+
 ![](markdown_data/softmax.png)
+
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
